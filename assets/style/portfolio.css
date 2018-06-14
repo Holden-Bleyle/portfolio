@@ -1,0 +1,407 @@
+/* STYLESHEET FOR HOLDEN BLEYLE'S PORTFOLIO SITE, MAY 2018 */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* TEMPLATE/MAIN CSS */
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background-color: #faebd7;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    min-height: 100%;
+    position: relative;
+    display: block;
+    min-height: 100vh;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    text-align: center;
+    color: #ffffff;
+    background-color: #333;
+    position: relative;
+    height: 60px;
+    margin-top: -60px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-top: 2px solid #000000;
+    display: block; 
+}
+
+footer p {
+    margin: 0;
+    padding: 5px 0px;
+}
+
+h1{
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(204, 204, 204, 0);
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+    padding: 100px 0px 0px 0px;
+    display: block;
+}
+
+section {
+    display: block;
+    overflow: hidden;
+}
+
+section h2 {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 15px;
+}
+
+section p {
+    display: block;
+}
+
+#hero-image{
+    display: block;
+    height: 50%;
+    background-image: url("../images/heroimage.jpg");
+    background-color: #faebd7;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+/* HAMBURGER NAV CSS */
+
+.logo {
+    display: inline-block;
+}
+
+nav ul {
+  width: 100%;
+  background-color: #5d5d5d;
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  transition: all 1s ease-in-out;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+nav u a:active {
+    color: #ffffff;
+}
+
+nav u a:visited {
+    color: #ffffff;
+}
+
+nav ul a:hover {
+  background-color: #000000;
+}
+
+.menu-bars{
+  width: 100%;
+  background-color: #5d5d5d;
+  text-align: right;
+  box-shadow: border-box;
+  padding: 8px 0px;
+  cursor: pointer;
+  color: #fff;
+  display: none;
+  z-index: 100;
+}
+
+.menu-bars .fas{
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 992px){
+
+  nav ul{
+    max-height: 0px;
+    position: fixed;
+    top: 4.5em;
+  }
+    
+    .logo {
+    display: none;
+    }
+
+  nav ul li{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+  }
+
+  .menu-bars{
+    display: block;
+    position: fixed;
+    top: 0;
+  }
+
+  .showing{
+    max-height: 20em;
+    position: fixed;
+    top: 3em;
+    z-index: 100;
+  }
+  
+}
+
+/* CONTENT CSS */
+.websitesummary{
+    overflow: hidden;
+    width: 100%;
+    height: 20%;
+    border-width: 2px 0px 0px 0px;
+    border-color: #000000;
+    border-style: solid;
+}
+
+.websitesummary p{
+    font-size: 14px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.infobox {
+    text-align: center;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.infobox h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.infobox h2 {
+    font-size: 1.5em;
+    padding-bottom: 5px;
+}
+
+.infobox p {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.websitedescription {
+    float: left;
+    font-size: 1.0em;
+    width: 80%;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.websiteimage {
+    width: 100%;
+    height: 40vh;
+    clear: both;
+    border-right: 2px solid #000000;
+    background-size: 100% auto;
+    
+}
+
+#websiteimage1 {
+    background-image: url(../images/aceintheholescreenshot.png);
+}
+
+#websiteimage2 {
+    background-image: url(../images/historyscreenshot.png);
+}
+
+#websiteimage3 {
+    background-image: url(../images/wordpressscreenshot.jpg);
+}
+
+/*GALLERY CSS*/
+.slide-wrap {
+  margin: 5% auto 0;
+  width: 70%;
+}
+.slide-mask {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+}
+.slide-group {
+  position: absolute; 
+  top: 0px; 
+  left: 0;
+  width: 100%;
+}
+.slide {
+  height: 600px;
+	font: 100 90px/135px;
+	font-size: 2em;
+	color: #5d5d5d;
+	text-align: center;
+	text-transform: uppercase;  
+}
+.slide img{
+    height: 80%;
+    max-height: 500px;
+}
+
+/* nav
+----------------------*/
+.slide-nav {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.slide-nav ul {
+	margin: 0;
+	padding: 0;
+}
+.slide-nav li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #5d5d5d;
+  cursor: pointer;
+  margin-left: .5em;
+}
+.slide-nav li.current {
+	background: #000000;
+}
+
+/*FORM CSS*/
+
+#contactheader {
+    margin-left: 20%;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.form {
+    margin-left: 20%;
+    margin-bottom: 5%;
+    width: 60%;
+    font-size: 1.1em;
+    line-height: 1.1em;
+}
+
+.formresponse {
+    margin-left: 10%;
+}
+
+.formresponse a {
+    color: #551a8b;
+}
+
+.singlelineinput {
+    width: 100%;
+}
+
+.textarea {
+    width: 100%;
+}
+
+/* MEDIA QUERIES (FOR LATER) */
+
+@media only screen and (min-width: 992px) {
+    nav a {
+    display: inline-block;
+    font-size: 16px;
+    padding: 14px 13px;
+}
+    
+    .logo a{
+        padding: 0px;
+    }
+    
+    #navlogo {
+    height: 36px;
+}
+    .websitesummary p {
+    float: left;
+    font-size: 16px;
+    margin-bottom: 0px;
+}
+    .websitedescription {
+        width: 60%;
+    }
+    
+    .websiteimage {
+    width: 20%;
+    float: left;
+    background-size: 20vw 100%;
+}
+
+    section h2{
+        font-size: 18px;
+    }
+}
